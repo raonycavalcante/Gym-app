@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { HashRouter} from 'react-router-dom'
 import Hero from './components/hero'
 import Generator from './components/Generator'
 import Workout from './components/Workout'
@@ -22,6 +23,7 @@ function App() {
   }
 
   return (
+    <HashRouter>
     <main className='min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white text-sm sm:text-base'>
      <Hero />
      <Generator 
@@ -36,6 +38,7 @@ function App() {
      />
      {workout && (<Workout workout={workout} />)} 
     </main>
+    </HashRouter>
   )
 }
 
